@@ -31,7 +31,7 @@ public class Calculator {
 		} else if(operator.equals("/")){
 			result = first / second;
 		} else{
-			result = 0;
+			result = 0;								//잘못됐을때 일단 결과값을 0으로 만듬
 			System.out.println("잘못 입력 하셨습니다.");
 		}
 		System.out.println("계산 값은: " + result);
