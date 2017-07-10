@@ -24,21 +24,19 @@ public class Calculator {
 
 	public static void main(String[] args) {
 		
-		Input input = new Input();
-		Output output = new Output();
 		Scanner scanner = new Scanner(System.in);
 
-		int result = input.getFirstValue(scanner);
+		int result = Input.getFirstValue(scanner);
 
 		while (true) {
-			String symbol = input.getSymbol(scanner);
+			String symbol = Input.getSymbol(scanner);
 
 			if ("quit".equals(symbol)) {
-				output.print(result);
+				Output.print(result);
 				break;
 			}
 
-			int second = input.getSecondValue(scanner);
+			int second = Input.getSecondValue(scanner);
 
 			result = calculate(symbol, result, second);
 		}
